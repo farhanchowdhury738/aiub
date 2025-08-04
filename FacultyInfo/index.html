@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Faculty</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7QRW9JF3EB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7QRW9JF3EB');
+</script>
+
+</head>
+<body>
+
+  <!-- Header Section -->
+<header id="main-header">
+  <div class="header-title-wrapper">
+    <a href="../index.html" class="home-button">Home</a>
+    <div class="title-pair">
+      <h1>Faculty Information</h1>
+    </div>
+  </div>
+</header>
+
+
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Start new wrapper -->
+    <div id="capture-area">
+
+      <!-- Filter Inputs -->
+      <div class="filters">
+        <input list="faculty-list" id="faculty-input" placeholder="Search Faculty Name" />
+        <datalist id="faculty-list"></datalist>
+
+        <input type="text" id="search" placeholder="Search Room, Department, Designation" />
+      </div>
+
+      <!-- Download Area -->
+      <div class="download-area" id="download-area">
+        <h2 id="dynamic-header">[Faculty Name]</h2>
+        <div class="card-container" id="card-container">
+          <!-- Faculty cards will be here dynamic way -->
+        </div>
+        <p class="footer-text" id="footer-text"></p>
+      </div>
+
+    </div>
+    <!-- End of wrapper -->
+
+    <!-- No Results Message -->
+    <p id="no-results" class="no-results">No results found.</p>
+
+    <!-- Download Button -->
+    <button id="download-btn">Download Image</button>
+
+    <!-- back previous Controls -->
+    <div class="pagination" id="pagination-controls">
+      <button id="prev" disabled>Previous</button>
+      <button id="next" disabled>Next</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <footer class="footer-content">
+
+  <div class="footer-text">
+    <p>All data collected from the AIUB official website.</p>
+  </div>
+
+  <!-- Right: LinkedIn Icon -->
+  <a href="https://www.linkedin.com/in/farhanchowdhury738/" target="_blank" class="linkedin-icon" aria-label="LinkedIn">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Icon" />
+  </a>
+</footer>
+
+  <!-- External Libraries and Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

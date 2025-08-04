@@ -1,0 +1,222 @@
+/* ====== Global Base Styles ====== */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("/images/aiub.jpg");
+  background-size: cover;        /*  makes the image cover the full screen */
+  background-repeat: no-repeat;  /* prevents tiling */
+  background-position: center;   /* centers the image */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* ====== Fixed Header ====== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #2c2b38;
+  color: white;
+  text-align: center;
+  padding: 15px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.header-title h1 {
+  font-size: 22px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.header-title p {
+  font-size: 16px;
+  margin: 0;
+  color: #d1d5db;
+}
+
+/* ====== Main Container Centered Vertically & Horizontally ====== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  padding-top: 100px; /* space for fixed header */
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 1;
+  min-height: calc(100vh - 140px);
+}
+
+
+/* ====== Card Styles ====== */
+.card {
+  background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+  border: 2px solid #dcdcdc;
+  border-radius: 10px;
+  width: 250px;
+  height: 200px;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.card:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.card img {
+  max-width: 60px;
+  height: auto;
+}
+
+.card h3 {
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+  color: #00274d;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+}
+
+.card-facultyInfo a {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/* ====== Footer ====== */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c2b38;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-align: center;
+  gap: 10px;
+  position: relative;
+}
+
+.footer-contact,
+.footer-text,
+.linkedin-icon {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+/* Keep styling for button and icon */
+.contact-button {
+  background-color: #007BFF;
+  color: white;
+  margin: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+}
+
+.linkedin-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.linkedin-icon:hover img {
+  transform: scale(1.1);
+}
+
+
+/* ====== Responsive Layout ====== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title h1 {
+    font-size: 18px;
+  }
+
+  .header-title p {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 600px) {
+  .footer-contact,
+  .footer-text,
+  .linkedin-icon {
+    flex: 1;
+  }
+
+  .footer-contact {
+    text-align: left;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  .linkedin-icon {
+    text-align: right;
+  }
+}
